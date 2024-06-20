@@ -1,61 +1,27 @@
-import React from 'react';
-import { StyleSheet, Text, View, Image, TouchableOpacity} from 'react-native';
-
-import MaterialCommuityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
 
 
 
-export default function App(){
-    return(
-        <View style={styles.container}>
-            <Image
-                source={require("./assets/mlr.jpg")}
-                style={styles.logo}
-            />
+import HomeScreen from '../Src/Views/HomeScreen';
+import NacionalScreen from '../Src/Views/NacionalScreen';
+import InternacionalScreen from '../Src/Views/InternacionalScreen';
+import PacotesScreen from '../Src/Views/NacionalScreen';
+import LoginScreen from '../Src/Views/LoginScreen';
 
-            <TouchableOpacity style={styles.NumeroTelefone}>
-                <MaterialCommuityIcons name="home" color={color} size={size} />
-                <Text style={styles.NumeroTelefone}>55+ 9999-999</Text>
-            </TouchableOpacity>
-            <TouchableOpacity style={styles.button}>
-                <Text style={styles.buttonNac}>Nacional</Text>
-            </TouchableOpacity>
-            <TouchableOpacity style={styles.button}>
-                    <Text style={styles.buttonInter}>Internacional</Text>
-            </TouchableOpacity>
-        </View>
-    )
+const Stack = createStackNavigator();
+
+export default function App() {
+    return (
+        <NavigationContainer>
+            <Stack.Navigator>
+                <Stack.Screen name="Home" component={HomeScreen} />
+                <Stack.Screen name="Nacional" component={NacionalScreen} />
+                <Stack.Screen name="Internacional" component={InternacionalScreen} />
+                <Stack.Screen name="Pacotes" component={PacotesScreen} />
+                <Stack.Screen name="Login" component={LoginScreen} />
+                
+            </Stack.Navigator>
+        </NavigationContainer>
+    );
 }
-
-const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        backgroundColor: 'ffff',
-    },
-    logo: {
-        width: 460,
-        height: 240,
-    },
-    buttonNac: {
-        fontFamily: 'Jomolhari',
-        color:'black',
-        left:'4%',
-        position: 'absolute',
-        top: -170,
-    },
-    buttonInter:{
-        fontFamily: 'Jomolhari',
-        color:'black',
-        right:'4%',
-        position: 'absolute',
-        top: -170,
-    },
-    NumeroTelefone:{
-        fontFamily: 'Jomolhari',
-        color:'black',
-        left:'2%',
-        
-      
-        top: -110,
-    }
-});
