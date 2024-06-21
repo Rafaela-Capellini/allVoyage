@@ -23,7 +23,7 @@ export default function PacotesScreen(props) {
                 <View style={styles.topo}>
                     <View style={{ width: "100%", height: 240 }}>
                         <ImageBackground
-                            source={require("../assets/uuuu.jpg")}
+                            source={require("../assets/into.png")}
                             style={styles.logo}
                         />
                     </View>
@@ -43,7 +43,7 @@ export default function PacotesScreen(props) {
                         <Text style={styles.Login} onPress={() => props.navigation.navigate('Login')} >Log in</Text>
                     </TouchableOpacity>
                     <TouchableOpacity style={styles.button}>
-                        <Text style={styles.pac} onPress={() => props.navigation.navigate('Pacotes')} >Pacotes</Text>
+                        <Text style={styles.Logout} onPress={() => props.navigation.navigate('Pacotes')} >Pacotes</Text>
                     </TouchableOpacity>
                     <TouchableOpacity style={styles.button}>
                         <Text style={styles.buttonNac} onPress={() => props.navigation.navigate('Nacional')}>Nacional</Text>
@@ -54,29 +54,40 @@ export default function PacotesScreen(props) {
                     </View>
                 </View>
 
-                <View style={styles.corpo}>
-                    <Image
-                        source={require("../assets/e.jpg")}
-                        style={styles.Image2}
-                    />
 
-
-                    <View style={styles.containerer}>
-                    <View style={styles.contima}>
-                        <Image
-                            source={require("../assets/o.jpg")}
-                            style={styles.Image3}
-                        />
-                         </View>
-                        <View style={styles.conttext}>
-                        <Text style={styles.TextImage3}> Teste Descubra o mundo através dos seus próprios passos. Aventura, cultura e memórias esperam por você em cada destino  </Text>
-                        </View>
-                    </View>
-                </View>
                 
                     
 
+                <View style={styles.corpo}>
                 
+                    <View style={styles.passagem1}>
+                        <Image
+                            source={require("../assets/quar.jpg")}
+                            style={styles.Image4}
+                        />
+                    <Text style={styles.texto1}>Refúgio contemporâneo com vistas deslumbrantes, onde luxo e conforto se encontram para uma estadia inesquecível.</Text>
+                    <Text style={styles.valor}>399,90</Text>
+                  </View>
+
+                  <View style={styles.passagem1}>
+                        <Image
+                            source={require("../assets/ryyy.jpg")}
+                            style={styles.Image4}
+                        />
+                    <Text style={styles.texto1}>Um oásis de elegância moderna, onde cada detalhe foi meticulosamente projetado para proporcionar uma experiência de conforto e sofisticação.</Text>
+                    <Text style={styles.valor}>299,90</Text>
+                  </View>
+
+                  <View style={styles.passagem1}>
+                        <Image
+                            source={require("../assets/seee.jpg")}
+                            style={styles.Image4}
+                        />
+                    <Text style={styles.texto1}>Um santuário de tranquilidade e estilo, ideal para quem busca uma escapada luxuosa e memorável.</Text>
+                    <Text style={styles.valor}>199,90</Text>
+                    
+                  </View>
+                  </View>
 
                 <View style={styles.rodape}>
                     <MaterialCommuityIcons name="instagram" style={styles.Rodape1} />
@@ -100,6 +111,12 @@ const styles = StyleSheet.create({
 
     nome: {
         fontFamily: "Bold"
+    },
+
+    valor: {
+        marginTop: 100,
+        fontWeight: "Bold"
+        
     },
 
     topo: {
@@ -189,10 +206,25 @@ const styles = StyleSheet.create({
         backgroundColor: '#B0D4EE',
         justifyContent: 'space-around',
         alignItems: 'center',
-        padding: 10,
-        paddingLeft: 50,
-        paddingRight: 40,
-        borderRadius: 20
+        
+        
+       
+    },
+
+    passagem1: {
+        flex: 1,
+        flexDirection: 'row',
+        backgroundColor: '#D9D9D9',
+        justifyContent: 'space-around',
+        alignItems: 'center',
+       borderRadius: 30,
+       paddingRight: 50,
+       margin: 20,
+       marginLeft: 30
+       
+       
+        
+        
        
     },
 
@@ -204,28 +236,23 @@ const styles = StyleSheet.create({
     },
 
     
-    Image3: {
-        marginLeft: 20,
-        marginTop:20,
-        marginBottom:60,
-        marginRight:10,
-        width: 150,
-        height: 150,
-        borderRadius: 20
-    },
+    
 
     Image4: {
-        marginLeft: 10,
-        marginTop:20,
-        marginBottom:60,
+       
+       
+       
         marginRight:20,
         width: 150,
         height: 150,
         borderRadius: 20
     },
+    
 
     texto1: {
-        fontWeight: 'bold',
+       
+       width: 190,
+       marginLeft: 20
         
     },
     containerer: {
@@ -235,16 +262,13 @@ const styles = StyleSheet.create({
         
     },
     TextImage3: {
-        fontSize:20,
+        fontSize:10,
        width: 180,
         marginRight:20,
         marginTop:20
     },
 
-    IconePassagem: {
-        width: 200,
-        height: 200
-    },
+    
     Rodape1: {
         
         fontSize: 40
