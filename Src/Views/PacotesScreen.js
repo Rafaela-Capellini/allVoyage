@@ -23,7 +23,7 @@ export default function PacotesScreen(props) {
                 <View style={styles.topo}>
                     <View style={{ width: "100%", height: 240 }}>
                         <ImageBackground
-                            source={require("../assets/cuu.jpg")}
+                            source={require("../assets/uuuu.jpg")}
                             style={styles.logo}
                         />
                     </View>
@@ -33,7 +33,7 @@ export default function PacotesScreen(props) {
 
                     <Image
                         source={require("../assets/Pato.png")}
-                        style={styles.Patinho}
+                        style={styles.Patinho} 
                     />
                     </View>
 
@@ -43,20 +43,16 @@ export default function PacotesScreen(props) {
                         <Text style={styles.Login} onPress={() => props.navigation.navigate('Login')} >Log in</Text>
                     </TouchableOpacity>
                     <TouchableOpacity style={styles.button}>
-                        <Text style={styles.Logout} >Log out</Text>
+                        <Text style={styles.pac} onPress={() => props.navigation.navigate('Pacotes')} >Pacotes</Text>
                     </TouchableOpacity>
                     <TouchableOpacity style={styles.button}>
                         <Text style={styles.buttonNac} onPress={() => props.navigation.navigate('Nacional')}>Nacional</Text>
                     </TouchableOpacity>
                     <TouchableOpacity style={styles.button}>
-                        <Text style={styles.buttonInter} onPress={() => props.navigation.navigate('Internacional')}>Internacional</Text>
+                        <Text style={styles.buttonInter} onPress={() => props.navigation.navigate('Home')}>Home</Text>
                     </TouchableOpacity>
                     </View>
                 </View>
-
-
-                
-                    
 
                 <View style={styles.corpo}>
                     <Image
@@ -77,6 +73,10 @@ export default function PacotesScreen(props) {
                         </View>
                     </View>
                 </View>
+                
+                    
+
+                
 
                 <View style={styles.rodape}>
                     <MaterialCommuityIcons name="instagram" style={styles.Rodape1} />
@@ -134,7 +134,8 @@ const styles = StyleSheet.create({
     corpo: {
         flex: 1,
         alignItems: 'center',
-        paddingTop: 20
+        paddingTop: 20,
+       
     },
 
     rodape: {
@@ -146,6 +147,55 @@ const styles = StyleSheet.create({
         padding: 20
     },
 
+    botaos:{
+        flex: 1,
+      
+         flexDirection: 'row',
+         justifyContent: 'space-between',
+         alignItems: 'center',
+         marginBottom: 40
+    },
+
+    botao1: {
+      
+    },
+
+    botaotext: {
+        marginRight: 70,
+        fontSize: 22,
+         backgroundColor: '#D9D9D9',
+         padding: 20,
+         paddingTop:10,
+         paddingBottom:10,
+         borderRadius: 25
+        
+    },
+    botaotext2: {
+         
+       
+        fontSize: 22,
+         backgroundColor: '#6EAAE8',
+         padding: 20,
+         paddingTop:10,
+         paddingBottom:10,
+         borderRadius: 25,
+         color: 'white'
+        
+    },
+
+    passagem: {
+        flex: 1,
+        flexDirection: 'row',
+        backgroundColor: '#B0D4EE',
+        justifyContent: 'space-around',
+        alignItems: 'center',
+        padding: 10,
+        paddingLeft: 50,
+        paddingRight: 40,
+        borderRadius: 20
+       
+    },
+
     logo: {
         width: "100%",
         resizeMode: "contain",
@@ -153,22 +203,30 @@ const styles = StyleSheet.create({
         justifyContent: "center"
     },
 
-    Image2: {
-        
-        width: 330,
-        height: 230,
+    
+    Image3: {
+        marginLeft: 20,
+        marginTop:20,
+        marginBottom:60,
+        marginRight:10,
+        width: 150,
+        height: 150,
         borderRadius: 20
-       
     },
 
-    Image3: {
-        marginLeft: 30,
-        marginTop:90,
+    Image4: {
+        marginLeft: 10,
+        marginTop:20,
         marginBottom:60,
         marginRight:20,
-        width: 200,
-        height: 200,
+        width: 150,
+        height: 150,
         borderRadius: 20
+    },
+
+    texto1: {
+        fontWeight: 'bold',
+        
     },
     containerer: {
        
@@ -181,6 +239,11 @@ const styles = StyleSheet.create({
        width: 180,
         marginRight:20,
         marginTop:20
+    },
+
+    IconePassagem: {
+        width: 200,
+        height: 200
     },
     Rodape1: {
         

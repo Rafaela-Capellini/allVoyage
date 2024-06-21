@@ -43,7 +43,7 @@ export default function InternacionaisScreen(props) {
                         <Text style={styles.Login} onPress={() => props.navigation.navigate('Login')} >Log in</Text>
                     </TouchableOpacity>
                     <TouchableOpacity style={styles.button}>
-                        <Text style={styles.Logout} >Log out</Text>
+                        <Text style={styles.Logout} onPress={() => props.navigation.navigate('Pacotes')} >Pacotes</Text>
                     </TouchableOpacity>
                     <TouchableOpacity style={styles.button}>
                         <Text style={styles.buttonNac} onPress={() => props.navigation.navigate('Nacional')}>Nacional</Text>
