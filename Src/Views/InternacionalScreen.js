@@ -23,7 +23,7 @@ export default function InternacionaisScreen(props) {
                 <View style={styles.topo}>
                     <View style={{ width: "100%", height: 240 }}>
                         <ImageBackground
-                            source={require("../assets/cuu.jpg")}
+                            source={require("../assets/into.png")}
                             style={styles.logo}
                         />
                     </View>
@@ -49,7 +49,7 @@ export default function InternacionaisScreen(props) {
                         <Text style={styles.buttonNac} onPress={() => props.navigation.navigate('Nacional')}>Nacional</Text>
                     </TouchableOpacity>
                     <TouchableOpacity style={styles.button}>
-                        <Text style={styles.buttonInter} onPress={() => props.navigation.navigate('Internacional')}>Internacional</Text>
+                        <Text style={styles.buttonInter} onPress={() => props.navigation.navigate('Home')}>Home</Text>
                     </TouchableOpacity>
                     </View>
                 </View>
@@ -59,23 +59,56 @@ export default function InternacionaisScreen(props) {
                     
 
                 <View style={styles.corpo}>
-                    <Image
-                        source={require("../assets/e.jpg")}
-                        style={styles.Image2}
-                    />
-
+                    <View style={styles.passagem}>
+                    <Text style={styles.texto1}>PARTIDA / CHEGADA</Text>
+                    <MaterialCommuityIcons  name="airplane" size={50} />
+                  </View>
 
                     <View style={styles.containerer}>
-                    <View style={styles.contima}>
+                      <View style={styles.contima}>
                         <Image
-                            source={require("../assets/o.jpg")}
+                            source={require("../assets/dez.png")}
                             style={styles.Image3}
                         />
-                         </View>
-                        <View style={styles.conttext}>
-                        <Text style={styles.TextImage3}> Teste Descubra o mundo através dos seus próprios passos. Aventura, cultura e memórias esperam por você em cada destino  </Text>
+                      </View>
+                         <MaterialCommuityIcons  name="calendar-week" size={50} marginBottom={150} />
+                        <View style={styles.calendario2}>
+                        <Image
+                            source={require("../assets/onze.png")}
+                            style={styles.Image4}
+                        />
                         </View>
                     </View>
+
+                    <View style={styles.passagem}>
+                    <Text style={styles.texto1}>SAIDA / DESTINO</Text>
+                    <MaterialCommuityIcons  name="airplane" size={50} />
+                  </View>
+                  <View style={styles.containerer}>
+                      <View style={styles.contima}>
+                        <Image
+                            source={require("../assets/paises.png")}
+                            style={styles.Image3}
+                        />
+                      </View>
+                         <MaterialCommuityIcons  name="calendar-week" size={50} marginBottom={150} />
+                        <View style={styles.calendario2}>
+                        <Image
+                            source={require("../assets/paises.png")}
+                            style={styles.Image4}
+                        />
+                        </View>
+                        
+                    </View>
+                        <View style={styles.botaos}>
+                        <View style={styles.botao1}>
+                            <Text style={styles.botaotext} onPress={() => props.navigation.navigate('Home')}>Cancelar</Text> 
+                            </View>
+                            <View style={styles.botao2}></View>
+                            <Text style={styles.botaotext2} onPress={() => props.navigation.navigate('Pacotes')}>Aplicar</Text>
+                        </View>
+                       
+                  
                 </View>
 
                 <View style={styles.rodape}>
@@ -134,7 +167,8 @@ const styles = StyleSheet.create({
     corpo: {
         flex: 1,
         alignItems: 'center',
-        paddingTop: 20
+        paddingTop: 20,
+       
     },
 
     rodape: {
@@ -146,6 +180,55 @@ const styles = StyleSheet.create({
         padding: 20
     },
 
+    botaos:{
+        flex: 1,
+      
+         flexDirection: 'row',
+         justifyContent: 'space-between',
+         alignItems: 'center',
+         marginBottom: 40
+    },
+
+    botao1: {
+      
+    },
+
+    botaotext: {
+        marginRight: 70,
+        fontSize: 22,
+         backgroundColor: '#D9D9D9',
+         padding: 20,
+         paddingTop:10,
+         paddingBottom:10,
+         borderRadius: 25
+        
+    },
+    botaotext2: {
+         
+       
+        fontSize: 22,
+         backgroundColor: '#6EAAE8',
+         padding: 20,
+         paddingTop:10,
+         paddingBottom:10,
+         borderRadius: 25,
+         color: 'white'
+        
+    },
+
+    passagem: {
+        flex: 1,
+        flexDirection: 'row',
+        backgroundColor: '#B0D4EE',
+        justifyContent: 'space-around',
+        alignItems: 'center',
+        padding: 10,
+        paddingLeft: 50,
+        paddingRight: 40,
+        borderRadius: 20
+       
+    },
+
     logo: {
         width: "100%",
         resizeMode: "contain",
@@ -153,22 +236,30 @@ const styles = StyleSheet.create({
         justifyContent: "center"
     },
 
-    Image2: {
-        
-        width: 330,
-        height: 230,
+    
+    Image3: {
+        marginLeft: 20,
+        marginTop:20,
+        marginBottom:60,
+        marginRight:10,
+        width: 150,
+        height: 150,
         borderRadius: 20
-       
     },
 
-    Image3: {
-        marginLeft: 30,
-        marginTop:90,
+    Image4: {
+        marginLeft: 10,
+        marginTop:20,
         marginBottom:60,
         marginRight:20,
-        width: 200,
-        height: 200,
+        width: 150,
+        height: 150,
         borderRadius: 20
+    },
+
+    texto1: {
+        fontWeight: 'bold',
+        
     },
     containerer: {
        
@@ -181,6 +272,11 @@ const styles = StyleSheet.create({
        width: 180,
         marginRight:20,
         marginTop:20
+    },
+
+    IconePassagem: {
+        width: 200,
+        height: 200
     },
     Rodape1: {
         
