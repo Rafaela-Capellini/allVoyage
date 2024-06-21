@@ -33,7 +33,7 @@ export default function InternacionaisScreen(props) {
 
                     <Image
                         source={require("../assets/Pato.png")}
-                        style={styles.Patinho}
+                        style={styles.Patinho} 
                     />
                     </View>
 
