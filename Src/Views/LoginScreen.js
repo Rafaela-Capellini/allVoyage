@@ -42,7 +42,7 @@ export default function LoginScreen(props) {
 
 
                         <TouchableOpacity style={styles.button}>
-                            <Text style={styles.Login} onPress={() => props.navigation.navigate('Login')} >Log in</Text>
+                            <Text style={styles.Login} onPress={() => props.navigation.navigate('Home')} >Home</Text>
                         </TouchableOpacity>
                         <TouchableOpacity style={styles.button}>
                             <Text style={styles.Logout} onPress={() => props.navigation.navigate('Pacotes')} >Pacotes</Text>
@@ -76,7 +76,7 @@ export default function LoginScreen(props) {
                                     <Text style={styles.botaotext} onPress={() => props.navigation.navigate('Home')}>Cancelar</Text>
                                 </View>
                                 <View style={styles.botao2}></View>
-                                <Text style={styles.botaotext2} onPress={() => props.navigation.navigate('Pacotes')}>Aplicar</Text>
+                                <Text style={styles.botaotext2} onPress={() => props.navigation.navigate('Pacotes')}>Logar</Text>
                             </View>
 
                         </View>
