@@ -25,7 +25,7 @@ export default function LoginScreen(props) {
                 <View style={styles.topo}>
                     <View style={{ width: "100%", height: 240 }}>
                         <ImageBackground
-                            source={require("../assets/cuu.jpg")}
+                            source={require("../assets/ddd.jpg")}
                             style={styles.logo}
                         />
                     </View>

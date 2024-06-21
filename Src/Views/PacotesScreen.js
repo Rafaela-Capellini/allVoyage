@@ -23,7 +23,7 @@ export default function PacotesScreen(props) {
                 <View style={styles.topo}>
                     <View style={{ width: "100%", height: 240 }}>
                         <ImageBackground
-                            source={require("../assets/into.png")}
+                            source={require("../assets/uuuu.jpg")}
                             style={styles.logo}
                         />
                     </View>
